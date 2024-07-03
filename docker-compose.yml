@@ -1,0 +1,17 @@
+
+
+version: '3.8'
+
+services:
+  db_eleicao:
+    image: postgres
+    restart: always
+    env_file:
+      - .env_db
+    volumes:
+      - meu_postgres_data2:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  meu_postgres_data2:
